@@ -9,10 +9,13 @@ ask_user_a_number = int(input("Input a non-negative number:"))
 
 # - Calculate the factorial of the user-defined integer using a loop.
 def factorial(n):
-    factorial = 1 
-    for i in range(n):
-        factorial *= i+1
-    return factorial
+    if n < 0:
+        return "Invalid. Please enter a non-negative number."
+    else:
+        factorial = 1 
+        for i in range(n):
+            factorial *= i+1
+        return factorial
 
 
 # - Display the factorial result
